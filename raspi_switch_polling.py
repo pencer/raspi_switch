@@ -36,6 +36,10 @@ try:
             if g_count == 0:
                 g_count = 1
                 os.system("/home/pi/kanachu/BusInfo/kanachu.py 12117 12101")
+        if not GPIO.input(BTN_C):
+            if g_count == 0:
+                g_count = 1
+                os.system("/home/pi/kanachu/BusInfo/checklibrary.py")
         #if not GPIO.input(BTN_C):
         #    if g_count == 0:
         #        g_count = 5
